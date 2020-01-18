@@ -20,10 +20,11 @@ from django.urls import path, re_path
 from django.views.static import serve
 
 urlpatterns = [
+    path("accounts/", include("allauth.urls")),
     path("admin/", admin.site.urls),
-    path("users/", include("vega_admin.contrib.users.urls")),
-    path("repo/", include("ohr.apps.repo.urls")),
     path("private-media/", include("private_storage.urls")),
+    path("repo/", include("ohr.apps.repo.urls")),
+    path("users/", include("vega_admin.contrib.users.urls")),
 ]
 
 if settings.DEBUG:
