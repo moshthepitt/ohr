@@ -37,6 +37,7 @@ INSTALLED_APPS = [
     "django_tables2",
     "django_filters",
     "vega_admin",
+    "vega_admin.contrib.users",
     "debug_toolbar",
     "django_extensions",
 ]
@@ -138,6 +139,9 @@ AUTHENTICATION_BACKENDS = (
     # `allauth` specific authentication methods, such as login by e-mail
     "allauth.account.auth_backends.AuthenticationBackend",
 )
+
+# vega admin
+VEGA_TEMPLATE = "badmin"
 
 # Sites
 SITE_ID = 1

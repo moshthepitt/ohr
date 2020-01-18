@@ -19,7 +19,10 @@ from django.contrib import admin
 from django.urls import path, re_path
 from django.views.static import serve
 
-urlpatterns = [path("admin/", admin.site.urls)]
+urlpatterns = [
+    path("admin/", admin.site.urls),
+    path("users/", include("vega_admin.contrib.users.urls")),
+]
 
 if settings.DEBUG:
     import debug_toolbar
