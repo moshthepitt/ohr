@@ -143,6 +143,15 @@ AUTHENTICATION_BACKENDS = (
     "allauth.account.auth_backends.AuthenticationBackend",
 )
 
+# auth and allauth settings
+LOGIN_REDIRECT_URL = "/repo/repo.document/list/"
+ACCOUNT_LOGOUT_REDIRECT_URL = "/accounts/login"
+EMAIL_CONFIRMATION_DAYS = 14
+# ACCOUNT_ADAPTER =
+ACCOUNT_AUTHENTICATION_METHOD = "username_email"
+# ACCOUNT_USER_DISPLAY =
+ACCOUNT_EMAIL_REQUIRED = True
+
 # vega admin
 VEGA_TEMPLATE = "badmin"
 
