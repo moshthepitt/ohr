@@ -1,0 +1,26 @@
+{% extends "vega_admin/badmin/base.html" %}
+{% block title %}{% block head_title %}{% endblock %}{% endblock %}
+
+{% block extrahead %}
+  {% block extra_head %}
+  {% endblock %}
+{% endblock %}
+
+{% block main_content %}
+    <div class="row">
+        <div class="col-md-12 content-box-info">
+            <div class="content-box-large box-with-header">
+                <div class="vega-content">
+                    {% block content %}
+                    {% endblock %}
+                    <br><br>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}
+
+{% block extrafooter %}
+  {% block extra_body %}
+  {% endblock %}
+{% endblock %}
