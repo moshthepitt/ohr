@@ -293,6 +293,14 @@ Django = ">=1.11"
 
 [[package]]
 category = "main"
+description = "Private media file storage for Django projects"
+name = "django-private-storage"
+optional = false
+python-versions = "*"
+version = "2.2.2"
+
+[[package]]
+category = "main"
 description = "Table/data-grid framework for Django"
 name = "django-tables2"
 optional = false
@@ -1059,7 +1067,7 @@ docs = ["sphinx", "jaraco.packaging (>=3.2)", "rst.linker (>=1.9)"]
 testing = ["pathlib2", "contextlib2", "unittest2"]
 
 [metadata]
-content-hash = "28ec1f74f55384faebfcd55e5e3f27534e14e0c2a23d8584840a7f8c1960d81f"
+content-hash = "274a10c6a28667cb898a3860bd7198b1ec0297c2779d6688b99993fabdc08395"
 python-versions = "^3.6"
 
 [metadata.files]
@@ -1193,6 +1201,10 @@ django-extensions = [
 django-filter = [
     {file = "django-filter-2.2.0.tar.gz", hash = "sha256:c3deb57f0dd7ff94d7dce52a047516822013e2b441bed472b722a317658cfd14"},
     {file = "django_filter-2.2.0-py3-none-any.whl", hash = "sha256:558c727bce3ffa89c4a7a0b13bc8976745d63e5fd576b3a9a851650ef11c401b"},
+]
+django-private-storage = [
+    {file = "django-private-storage-2.2.2.tar.gz", hash = "sha256:5c220ce8b52debdf1d43860a4b1931c39317735dfc1bab366c64d988fb0f8a5a"},
+    {file = "django_private_storage-2.2.2-py2.py3-none-any.whl", hash = "sha256:a7a37ae4d9b32992c164f3c0c7184df51aa286e456831a09636e574d74e5e508"},
 ]
 django-tables2 = [
     {file = "django-tables2-2.2.1.tar.gz", hash = "sha256:0d9b17f5c030ba1b5fcaeb206d8397bf58f1fdfc6beaf56e7874841b8647aa94"},
