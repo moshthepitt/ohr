@@ -311,10 +311,10 @@ description = "Simple and fast automated CRUD for any Django model"
 name = "django-vega-admin"
 optional = false
 python-versions = "*"
-version = "0.0.16"
+version = "0.0.17"
 
 [package.dependencies]
-Django = ">=2.1.10"
+Django = ">=2.2"
 django-braces = "*"
 django-crispy-forms = "*"
 django-filter = "*"
@@ -1059,7 +1059,7 @@ docs = ["sphinx", "jaraco.packaging (>=3.2)", "rst.linker (>=1.9)"]
 testing = ["pathlib2", "contextlib2", "unittest2"]
 
 [metadata]
-content-hash = "048260313fa3e6534b1d0e0b3313969bc942b6267d4fec82c7dfb76e31adb4b7"
+content-hash = "28ec1f74f55384faebfcd55e5e3f27534e14e0c2a23d8584840a7f8c1960d81f"
 python-versions = "^3.6"
 
 [metadata.files]
@@ -1199,8 +1199,8 @@ django-tables2 = [
     {file = "django_tables2-2.2.1-py2.py3-none-any.whl", hash = "sha256:6afa0496695e15b332e98537265d09fe01a55b28c75a85323d8e6b0dc2350280"},
 ]
 django-vega-admin = [
-    {file = "django-vega-admin-0.0.16.tar.gz", hash = "sha256:2b04ca2a75091d71ad083983d3cac9bb5515985a9d5f81219ad8de3c44d03922"},
-    {file = "django_vega_admin-0.0.16-py3-none-any.whl", hash = "sha256:2b445654ec7ede900cdb2c74ec4ebd5887edd32b81e095ffec574cf2876223ea"},
+    {file = "django-vega-admin-0.0.17.tar.gz", hash = "sha256:f0768a1073cf434a8f60089a03f732d2e58274683311a8cd00ff50f1ddaa926e"},
+    {file = "django_vega_admin-0.0.17-py3-none-any.whl", hash = "sha256:70bc96e3333811a0a78cb7caa9f001790e70e91c36219a8854edc105148b7143"},
 ]
 entrypoints = [
     {file = "entrypoints-0.3-py2.py3-none-any.whl", hash = "sha256:589f874b313739ad35be6e0cd7efde2a4e9b6fea91edcc34e58ecbb8dbe56d19"},
