@@ -27,6 +27,8 @@ INSTALLED_APPS = [
     "django.contrib.staticfiles",
     # more django apps
     "django.contrib.sites",
+    # custom
+    "ohr.apps.repo",
     # third party
     "allauth",
     "allauth.account",
@@ -36,6 +38,7 @@ INSTALLED_APPS = [
     "crispy_forms",
     "django_tables2",
     "django_filters",
+    "private_storage",
     "vega_admin",
     "vega_admin.contrib.users",
     "debug_toolbar",
@@ -142,6 +145,9 @@ AUTHENTICATION_BACKENDS = (
 
 # vega admin
 VEGA_TEMPLATE = "badmin"
+
+# private files
+PRIVATE_STORAGE_AUTH_FUNCTION = "private_storage.permissions.allow_staff"
 
 # Sites
 SITE_ID = 1

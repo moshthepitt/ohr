@@ -22,6 +22,8 @@ from django.views.static import serve
 urlpatterns = [
     path("admin/", admin.site.urls),
     path("users/", include("vega_admin.contrib.users.urls")),
+    path("repo/", include("ohr.apps.repo.urls")),
+    path("private-media/", include("private_storage.urls")),
 ]
 
 if settings.DEBUG:
