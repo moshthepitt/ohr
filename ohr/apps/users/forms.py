@@ -19,6 +19,7 @@ class SignupForm(  # pylint: disable=bad-continuation
 
     first_name = forms.CharField(label=_(constants.FIRST_NAME), required=True)
     last_name = forms.CharField(label=_(constants.LAST_NAME), required=True)
+    board_num = forms.CharField(label=_(constants.BOARD_NUMBER), required=True)
 
     class Meta:
         """Class Meta options."""
@@ -29,6 +30,10 @@ class SignupForm(  # pylint: disable=bad-continuation
     def save(self, request=None):
         """Custom save method."""
         user = super().save(request)
+        if constants.BOARD_NUM_FIELD in self.cleaned_data:
+            user.userprofile.data[constants.BOARD_NUM_FIELD] = self.cleaned_data[
+                constants.BOARD_NUM_FIELD
+            ]
         user.userprofile.save()
         return user
 
@@ -49,6 +54,7 @@ class SignupForm(  # pylint: disable=bad-continuation
             Field("first_name", placeholder=_(constants.FIRST_NAME)),
             Field("last_name", placeholder=_(constants.LAST_NAME)),
             Field("email", placeholder=_(constants.EMAIL_ADDRESS)),
+            Field("board_num", placeholder=_(constants.BOARD_NUMBER)),
             Field("password1", autocomplete="off"),
             Field("password2", autocomplete="off"),
         )
