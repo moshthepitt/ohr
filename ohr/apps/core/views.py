@@ -1,7 +1,7 @@
 """Core views module."""
 from django.views.generic.base import TemplateView
 
-from ohr.apps.repo.models import Category, Document
+from ohr.apps.repo.models import Document
 
 
 class HomePageView(TemplateView):
@@ -13,6 +13,4 @@ class HomePageView(TemplateView):
         """Get context data."""
         context = super().get_context_data(**kwargs)
         context["documents"] = Document.objects.all()[:4]
-        context["feature"] = Document.objects.last()
-        context["categories"] = Category.objects.all()[:15]
         return context
