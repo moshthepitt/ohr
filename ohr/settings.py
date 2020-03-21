@@ -149,10 +149,13 @@ AUTHENTICATION_BACKENDS = (
 LOGIN_REDIRECT_URL = "/repo/repo.document/list/"
 ACCOUNT_LOGOUT_REDIRECT_URL = "/accounts/login"
 EMAIL_CONFIRMATION_DAYS = 14
-# ACCOUNT_ADAPTER =
-ACCOUNT_AUTHENTICATION_METHOD = "username_email"
-# ACCOUNT_USER_DISPLAY =
+ACCOUNT_AUTHENTICATION_METHOD = "email"
+ACCOUNT_ADAPTER = "ohr.apps.core.adapter.CustomAccountAdapter"
+ACCOUNT_USER_DISPLAY = "ohr.apps.users.utils.get_user_display"
+ACCOUNT_FORMS = {"signup": "ohr.apps.users.forms.SignupForm"}
 ACCOUNT_EMAIL_REQUIRED = True
+ACCOUNT_LOGOUT_ON_GET = False
+ACCOUNT_USERNAME_REQUIRED = False
 
 # vega admin
 VEGA_TEMPLATE = "badmin"
