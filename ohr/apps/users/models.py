@@ -1,5 +1,7 @@
 """Models module for users app."""
 from django.conf import settings
+from django.contrib.postgres.fields import JSONField
+from django.core.serializers.json import DjangoJSONEncoder
 from django.db import models
 from django.utils.translation import ugettext_lazy as _
 
@@ -12,6 +14,7 @@ class UserProfile(TimeStampedModel):
     """Model used to store more information on users."""
 
     user = models.OneToOneField(USER, verbose_name=_("User"), on_delete=models.CASCADE)
+    data = JSONField(_("Data"), encoder=DjangoJSONEncoder, default=dict, blank=True)
 
     class Meta:
         """Class Meta."""
