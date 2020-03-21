@@ -3,23 +3,23 @@
     <ul class="nav">
         {% if request.user.is_authenticated %}
             <li class="submenu">
-                <a href="{% url 'repo.document-list' %}">
+                <a href="{% url 'repo:repo.document-list' %}">
                     <i class="glyphicon glyphicon-file"></i> {% trans "Projects" %}
                     <span class="caret pull-right"></span>
                 </a>
                 <ul>
-                    <li><a href="{% url 'repo.document-list' %}">{% trans "View Projects" %}</a></li>
-                    <li><a href="{% url 'repo.document-create' %}">{% trans "Add Project" %}</a></li>
+                    <li><a href="{% url 'repo:repo.document-list' %}">{% trans "View Projects" %}</a></li>
+                    <li><a href="{% url 'repo:repo.document-create' %}">{% trans "Add Project" %}</a></li>
                 </ul>
             </li>
             <li class="submenu">
-                <a href="{% url 'repo.category-list' %}">
+                <a href="{% url 'repo:repo.category-list' %}">
                     <i class="glyphicon glyphicon-tags"></i> {% trans "Categories" %}
                     <span class="caret pull-right"></span>
                 </a>
                 <ul>
-                    <li><a href="{% url 'repo.category-list' %}">{% trans "View Categories" %}</a></li>
-                    <li><a href="{% url 'repo.category-create' %}">{% trans "Add Category" %}</a></li>
+                    <li><a href="{% url 'repo:repo.category-list' %}">{% trans "View Categories" %}</a></li>
+                    <li><a href="{% url 'repo:repo.category-create' %}">{% trans "Add Category" %}</a></li>
                 </ul>
             </li>
             <li class="submenu">

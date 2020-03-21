@@ -26,7 +26,7 @@ urlpatterns = [
     path("accounts/", include("allauth.urls")),
     path("admin/", admin.site.urls),
     path("private-media/", include("private_storage.urls")),
-    path("repo/", include("ohr.apps.repo.urls")),
+    path("repo/", include("ohr.apps.repo.urls", namespace="repo")),
     path("users/", include("vega_admin.contrib.users.urls")),
 ]
 
