@@ -19,7 +19,10 @@ from django.contrib import admin
 from django.urls import path, re_path
 from django.views.static import serve
 
+from ohr.apps.repo.views import HomePageView
+
 urlpatterns = [
+    path("", HomePageView.as_view(), name="home"),
     path("accounts/", include("allauth.urls")),
     path("admin/", admin.site.urls),
     path("private-media/", include("private_storage.urls")),
