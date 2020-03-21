@@ -19,7 +19,7 @@ from django.contrib import admin
 from django.urls import path, re_path
 from django.views.static import serve
 
-from ohr.apps.repo.views import HomePageView
+from ohr.apps.core.views import HomePageView
 
 urlpatterns = [
     path("", HomePageView.as_view(), name="home"),

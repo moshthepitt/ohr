@@ -28,7 +28,9 @@ INSTALLED_APPS = [
     # more django apps
     "django.contrib.sites",
     # custom
+    "ohr.apps.core",
     "ohr.apps.repo",
+    "ohr.apps.users",
     # third party
     "allauth",
     "allauth.account",
