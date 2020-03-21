@@ -29,4 +29,5 @@ class UserProfile(TimeStampedModel):
         return self.user.username
 
     def __str__(self):
+        """Display user-friendly string for object."""
         return f"{self.get_name()}'s profile"
