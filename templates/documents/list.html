@@ -33,7 +33,7 @@
             {% for object in object_list %}
                 <div class="panel panel-info">
                     <div class="panel-body">
-                        <h3>{{object.title}}</h3>
+                        <h3><a href="{% url 'repo:repo.document-view' doc.id %}">{{object.title}}</a></h3>
                         <p>{{object.description|linebreaks|truncatewords_html:150}}</p>
                     </div>
                 </div>
