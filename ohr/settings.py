@@ -146,7 +146,7 @@ AUTHENTICATION_BACKENDS = (
 )
 
 # auth and allauth settings
-LOGIN_REDIRECT_URL = "/repo/repo.document/list/"
+LOGIN_REDIRECT_URL = "repo/documents"
 ACCOUNT_LOGOUT_REDIRECT_URL = "/accounts/login"
 EMAIL_CONFIRMATION_DAYS = 14
 ACCOUNT_AUTHENTICATION_METHOD = "email"
