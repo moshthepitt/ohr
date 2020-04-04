@@ -7,3 +7,8 @@ class UsersConfig(AppConfig):
 
     name = "ohr.apps.users"
     label = "ohr.users"
+
+    def ready(self):
+        """Run when ready."""
+        # pylint: disable=import-outside-toplevel,unused-import
+        from ohr.apps.users import signals  # noqa
