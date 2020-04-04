@@ -1,76 +1,46 @@
 {% extends "vega_admin/badmin/base.html" %}
 {% load static i18n %}
 
-{% block extracss %}
-<style>
-    .prada {
-        font-size: 35px;
-    }
-    .prada .first-letter {
-        font-size: 50px;
-        font-weight: bolder;
-    }
-</style>
-{% endblock %}
-
-{% block root_content %}
-    <div class="col-md-2">
-        <div class="sidebar content-box" style="display: block;">
-            <ul class="prada list-unstyled">
-                <li><span class="first-letter">O</span>nline</li>
-                <li><span class="first-letter">H</span>ealth</li>
-                <li><span class="first-letter">R</span>epository</li>
-            </ul>
-        </div>
-    </div>
-    <div class="col-md-8">
-        {% block page_content %}
-        <div class="row page-content">
-            <div class="col-md-12 panel-info">
-                {% block all_content %}
-                <div class="vega-content-box">
-                    {% block main_content %}
-                        <div class="row">
-                            <div class="col-md-10 col-md-offset-1">
-                                <div class="row search-form">
-                                    <form class="form" action="{% url 'repo:search' %}">
-                                        <div class="input-group">
-                                            <input type="text" class="form-control input-lg" name="q" placeholder="Search for documents">
-                                            <div class="input-group-btn">
-                                                <button class="btn btn-primary btn-lg" type="submit">
-                                                    <span class="glyphicon glyphicon-search"></span>
-                                                </button>
-                                            </div>
-                                        </div>
-                                    </form>
-                                </div>
-                                <br/>
-                                <div class="row articles">
-                                    <h3>{% trans "Latest" %}</h3>
-                                    {% for doc in documents %}
-                                    <div class="panel panel-info">
-                                        <div class="col-md-12x">
-                                            <div class="panel-body">
-                                                <h2>
-                                                    <a href="#">{{doc.title}}</a>
-                                                </h2>
-                                            </div>
-                                        </div>
+{% block page_content %}
+<div class="row page-content">
+    <div class="col-md-12 panel-info">
+        {% block all_content %}
+        <div class="vega-content-box">
+            {% block main_content %}
+                <div class="row">
+                    <div class="col-md-10 col-md-offset-1">
+                        <div class="row search-form">
+                            <form class="form" action="{% url 'repo:search' %}">
+                                <div class="input-group">
+                                    <input type="text" class="form-control input-lg" name="q" placeholder="Search for documents">
+                                    <div class="input-group-btn">
+                                        <button class="btn btn-primary btn-lg" type="submit">
+                                            <span class="glyphicon glyphicon-search"></span>
+                                        </button>
                                     </div>
-                                    {% endfor %}
+                                </div>
+                            </form>
+                        </div>
+                        <br/>
+                        <div class="row articles">
+                            <h3>{% trans "Latest" %}</h3>
+                            {% for doc in documents %}
+                            <div class="panel panel-info">
+                                <div class="col-md-12x">
+                                    <div class="panel-body">
+                                        <h2>
+                                            <a href="#">{{doc.title}}</a>
+                                        </h2>
+                                    </div>
                                 </div>
                             </div>
+                            {% endfor %}
                         </div>
-                    {% endblock %}
+                    </div>
                 </div>
-                {% endblock %}
-            </div>
+            {% endblock %}
         </div>
         {% endblock %}
     </div>
-    {% block sidebar_content %}
-        <div class="col-md-2">
-            {% include "sidebar.html" %}
-        </div>
-    {% endblock %}
+</div>
 {% endblock %}
