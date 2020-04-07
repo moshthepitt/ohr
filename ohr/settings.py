@@ -147,9 +147,9 @@ AUTHENTICATION_BACKENDS = (
 
 # auth and allauth settings
 LOGIN_REDIRECT_URL = "repo/documents"
-ACCOUNT_LOGOUT_REDIRECT_URL = "/accounts/login"
+ACCOUNT_LOGOUT_REDIRECT_URL = "/"
 EMAIL_CONFIRMATION_DAYS = 14
-ACCOUNT_AUTHENTICATION_METHOD = "email"
+ACCOUNT_AUTHENTICATION_METHOD = "username_email"
 ACCOUNT_ADAPTER = "ohr.apps.core.adapter.CustomAccountAdapter"
 ACCOUNT_USER_DISPLAY = "ohr.apps.users.utils.get_user_display"
 ACCOUNT_FORMS = {"signup": "ohr.apps.users.forms.SignupForm"}
