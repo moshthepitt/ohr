@@ -2,37 +2,7 @@
 <div class="sidebar content-box" style="display: block;">
     <ul class="nav">
         {% if request.user.is_authenticated %}
-            <!--
-            <li class="submenu">
-                <a href="{% url 'repo:repo.document-list' %}">
-                    <i class="glyphicon glyphicon-file"></i> {% trans "Projects" %}
-                    <span class="caret pull-right"></span>
-                </a>
-                <ul>
-                    <li><a href="{% url 'repo:repo.document-list' %}">{% trans "View Projects" %}</a></li>
-                    <li><a href="{% url 'repo:repo.document-create' %}">{% trans "Add Project" %}</a></li>
-                </ul>
-            </li>
-            <li class="submenu">
-                <a href="{% url 'repo:repo.category-list' %}">
-                    <i class="glyphicon glyphicon-tags"></i> {% trans "Categories" %}
-                    <span class="caret pull-right"></span>
-                </a>
-                <ul>
-                    <li><a href="{% url 'repo:repo.category-list' %}">{% trans "View Categories" %}</a></li>
-                    <li><a href="{% url 'repo:repo.category-create' %}">{% trans "Add Category" %}</a></li>
-                </ul>
-            </li>
-            <li class="submenu">
-                <a href="{% url 'auth.user-list' %}">
-                    <i class="glyphicon glyphicon-user"></i> {% trans "Users" %}
-                    <span class="caret pull-right"></span>
-                </a>
-                <ul>
-                    <li><a href="{% url 'auth.user-list' %}">{% trans "View Users" %}</a></li>
-                </ul>
-            </li>
-            -->
+            <li><a href="{% url 'repo:create' %}"><i class="glyphicon glyphicon-list"></i> {% trans "Add Document" %}</a></li>
             <li><a href="{% url 'account_logout' %}"><i class="glyphicon glyphicon-log-out"></i> {% trans "Log Out" %}</a></li>
         {% else %}
             <li><a href="{% url 'account_login' %}"><i class="glyphicon glyphicon-log-in"></i> {% trans "Login" %}</a></li>
