@@ -12,5 +12,5 @@ class HomePageView(TemplateView):
     def get_context_data(self, **kwargs):
         """Get context data."""
         context = super().get_context_data(**kwargs)
-        context["documents"] = Document.objects.all()[:4]
+        context["documents"] = Document.objects.all().order_by("-created")[:4]
         return context
