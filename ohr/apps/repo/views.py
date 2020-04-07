@@ -2,15 +2,20 @@
 from vega_admin.utils import get_modelform
 from vega_admin.views import VegaCreateView, VegaCRUDView, VegaListView
 
+from braces.views import LoginRequiredMixin
+
 from ohr.apps.repo.models import Category, Document
 
 
-class DocumentCreateView(VegaCreateView):  # pylint: disable=too-many-ancestors
+class DocumentCreateView(  # pylint: disable=bad-continuation
+    LoginRequiredMixin, VegaCreateView
+):  # pylint: disable=too-many-ancestors
     """List view for documents."""
 
     model = Document
     form_class = get_modelform(Document)
     cancel_url = "/"
+    success_url = "/"
 
     def get_initial(self):
         """Get initial values for form."""
